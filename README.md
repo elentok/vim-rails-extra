@@ -16,5 +16,6 @@ Installation:
 
 * When using Vundle, add these lines to your .vimrc:
 
-    Bundle "tomtom/tlib_vim"
-    Bundle "elentok/vim-rails-extra"
+
+        Bundle "tomtom/tlib_vim"
+        Bundle "elentok/vim-rails-extra"

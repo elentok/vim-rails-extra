@@ -12,3 +12,6 @@ vmap \wa :call CleanWordArray()<cr>
 nmap ,c :!cucumber --drb --tags @wip<cr>
 nmap ,C :!cucumber --drb<cr>
 
+" run rspec on the current line:
+nmap ,s :!rspec %:<c-r>=line('.')<cr><cr>
+

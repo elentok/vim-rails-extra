@@ -28,3 +28,16 @@ vmap \csj :RStringsToJson<cr>
 vmap \csa :RStringsToArrows<cr>
 vmap \caj :RArrowsToJson<cr>
 vmap \cas :RArrowsToStrings<cr>
+
+func! RCamelCaseToUnderscore()
+  exec "'<,'>" . 's/\<\([A-Z]\)/\L\1/ge'
+  exec "'<,'>" . 's/\([a-z0-9]\)\([A-Z]\)/\1_\L\2/ge'
+endfunc
+
+func! RUnderscoreToCamelCase()
+  exec "'<,'>" . 's/\<\([a-z]\)/\U\1/ge'
+  exec "'<,'>" . 's/\([a-z0-9]\)_\([a-z0-9]\)/\1\U\2/ge'
+endfunc
+
+command! -range RCamelCaseToUnderscore call RCamelCaseToUnderscore()
+command! -range RUnderscoreToCamelCase call RUnderscoreToCamelCase()

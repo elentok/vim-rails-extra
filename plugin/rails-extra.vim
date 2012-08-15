@@ -41,3 +41,11 @@ endfunc
 
 command! -range RCamelCaseToUnderscore call RCamelCaseToUnderscore()
 command! -range RUnderscoreToCamelCase call RUnderscoreToCamelCase()
+
+func! CssToSass()
+  exec "%s/ *{ *//e"
+  exec "%s/^ *} *$//e"
+  exec "%s/; *$//e"
+endfunc
+
+command! CssToSass call CssToSass()

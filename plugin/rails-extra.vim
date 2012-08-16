@@ -49,3 +49,8 @@ func! CssToSass()
 endfunc
 
 command! CssToSass call CssToSass()
+
+augroup VimRailsExtra
+  autocmd!
+  autocmd BufRead,BufEnter Guardfile setlocal filetype=ruby
+augroup END

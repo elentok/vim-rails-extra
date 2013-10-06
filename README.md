@@ -6,8 +6,8 @@ This plugin adds extra features for rails development:
 * convert ['asdf', 'asdf'] to %w{asdf asdf}
 * run cucumber:
   
-  * ,c - runs @wip scenarios
-  * ,C - runs all scenarios
+  * :CucumberWip - runs @wip scenarios
+  * :CucumberAll - runs all scenarios
 
 * TODO: a lot more stuff (autocomplete gems in Gemfile, ...)
 
